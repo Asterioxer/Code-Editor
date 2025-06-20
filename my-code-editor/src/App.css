@@ -1,0 +1,73 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+.header button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #44475a;
+  color: #f8f8f2;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-area {
+  display: flex;
+  flex: 1;
+}
+
+.project-explorer {
+  width: 200px;
+  background-color: #282a36;
+  color: #f8f8f2;
+  padding: 10px;
+}
+
+.code-editor {
+  flex: 1;
+  height: 100%;
+}
+
+.tab-bar {
+  display: flex;
+  background-color: #44475a;
+}
+
+.tab-bar button {
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: #f8f8f2;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-bar button.active {
+  background-color: #6272a4;
+  border-bottom: 2px solid #f8f8f2;
+}
+
+.preview-area {
+  width: 40%;
+  height: 100%;
+  border: 1px solid #44475a;
+}
+
+.terminal-area {
+  height: 300px;
+  background-color: #282a36;
+  color: #f8f8f2;
+  border-top: 1px solid #44475a;
+}
