@@ -1,0 +1,6 @@
+[package]
+name = "luaforge-inspect"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Optional local inspector for Lua files"
