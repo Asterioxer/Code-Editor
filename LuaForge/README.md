@@ -1,15 +1,15 @@
 # LuaForge λ
 
-A Lua-first browser playground and language lab. Write actual Lua, run it locally in your browser, and learn through practical snippets. No backend, account, build step, or install required.
+LuaForge is a Lua-first browser playground and language lab. This directory contains the static app and optional maintainer tooling staged on the `project/luaforge` branch of `Asterioxer/Code-Editor` because the active GitHub connector does not provide repository creation.
 
-## Contents
+- `index.html`: playground and landing page
+- `src/`: browser app and responsive style system
+- `examples/`: runnable Lua samples
+- `docs/`: architecture, security, roadmap
+- `.github/workflows/`: CI and Pages deployment workflow
+- `python/` and `rust/`: optional tools, never required to run the website
 
-- `index.html` — static app entrypoint
-- `src/app.js` and `src/styles.css` — editor interaction and responsive styling
-- `examples/` — four runnable Lua samples
-- `docs/` — architecture, security notes, and roadmap
-- `.github/workflows/` — CI checks and GitHub Pages deploy
-- `python/` and `rust/` — optional maintainer helper and local inspector; neither is required by Pages
+The app uses Fengari from jsDelivr to execute Lua locally in the browser. It requires no server. This is a learning tool, not a hardened security sandbox.
 
 ## Run locally
 
@@ -17,12 +17,12 @@ A Lua-first browser playground and language lab. Write actual Lua, run it locall
 python -m http.server 8000
 ```
 
-Open <http://localhost:8000/LuaForge/> when serving the repository root. The full intended standalone site in the downloadable ZIP uses `index.html` at its project root.
+Open `http://localhost:8000/LuaForge/` when serving the parent repository root.
 
-## GitHub Pages
+## Pages
 
-The workflow is prepared at `LuaForge/.github/workflows/pages.yml`. To host this directory as a project subfolder, Pages workflow must upload the `LuaForge` directory as the artifact path; no backend is needed. For the clean standalone project URL `https://asterioxer.github.io/LuaForge/`, create a dedicated repository named `LuaForge` and place these project files at its root.
+The included workflow publishes the `LuaForge/` directory as a Pages artifact on pushes to `main`. GitHub Pages settings must use **GitHub Actions** as source. To get the clean URL `https://asterioxer.github.io/LuaForge/`, create a new public repository called `LuaForge` and move the directory contents to its root; that final repository-creation operation cannot be completed through the current connector.
 
-See [ARCHITECTURE.md](docs/ARCHITECTURE.md), [SECURITY.md](docs/SECURITY.md), and [ROADMAP.md](docs/ROADMAP.md).
+Run the structural test suite from this repository root with `python -m unittest discover -s LuaForge/tests -v`.
 
-License: MIT.
+See docs for safety limitations and architecture. MIT license.
